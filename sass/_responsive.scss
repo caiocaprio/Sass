@@ -1,0 +1,59 @@
+@include mq( $mq-xsm ) {
+    .hidden-xsm {
+        display: none !important;
+    }
+}
+
+@include mq( $mq-sm ) {
+    .hidden-sm {
+        display: none !important;
+    }
+}
+
+@include mq( $mq-md ) {
+    .hidden-md {
+        display: none !important;
+    }
+}
+
+@include mq( $mq-lg ) {
+    .hidden-lg {
+        display: none !important;
+    }
+}
+
+@include mq( $mq-xl ) {
+    .hidden-xl {
+        display: none !important;
+    }
+}
+
+@include mq( 568px, 'max' ) {
+   .hidden-xsm--max {
+        display: none !important;
+    }
+}
+
+@include mq( 639px, 'max' ) {
+   .hidden-sm--max {
+        display: none !important;
+    }
+}
+
+@include mq( 769px, 'max' ) {
+   .hidden-md--max {
+        display: none !important;
+    }
+}
+
+@include mq( 1023px, 'max' ) {
+   .hidden-lg--max {
+        display: none !important;
+    }
+}
+
+@include mq( 1279px, 'max' ) {
+   .hidden-xl--max {
+        display: none !important;
+    }
+}

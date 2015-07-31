@@ -1,0 +1,17 @@
+$sprite-spacing: 10px;
+
+$sprite-normal-map: sprite-map("my-icons/normal/*.png", $spacing: $sprite-spacing);
+$sprite-normal: sprite-url( $sprite-normal-map );
+$sprite-normal-path: sprite-path( $sprite-normal-map );
+
+$sprite-retina-map: sprite-map("my-icons/retina/*.png", $spacing: $sprite-spacing);
+$sprite-retina: sprite-url( $sprite-retina-map );
+$sprite-retina-path: sprite-path( $sprite-retina-map );
+
+
+.sprite {
+	background-repeat: no-repeat;
+	background-image: $sprite-normal;
+}
+
+@include generate-sprite-class( $normal-map: $sprite-normal-map, $retina-map: $sprite-retina-map );

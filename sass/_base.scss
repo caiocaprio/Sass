@@ -1,0 +1,124 @@
+//$icons: sprite-map("my-icons/*.png");
+@import "my-icons/*.png";
+@import 'include/footer';
+@import 'include/header';
+
+p{}
+
+* {
+   //@include box-sizing();
+}
+
+body {
+  background-color: #FFFFFF !important;
+  font-family: Arial, "Times New Roman", "Bitstream Charter", Times, serif;
+  color: #000000;
+  list-style: none;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/*Esconde os spinners do input type-=number*/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+input[placeholder] { text-overflow: ellipsis; }
+::-moz-placeholder { text-overflow: ellipsis; } /* firefox 19+ */
+input:-moz-placeholder { text-overflow: ellipsis; }
+
+/*Remover X para limpar campo input no ie*/
+::-ms-clear { display: none; }
+
+a, a:visited, a:hover {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    border: 0;
+}
+
+img {
+  border: 0;
+  outline: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    li {
+        list-style-type: none;
+    }
+}
+
+.hide {
+	display: none !important;
+}
+
+.clear {
+    &--both {
+        clear: both;
+    }
+}
+
+.clear-fix
+{
+  clear: both;
+  overflow: hidden;
+}
+
+.no-wrap {
+    display:inline-block;
+    margin-right:-1000px;
+    overflow: hidden;
+    position:relative; /* must be relative */
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    width:100%; /* fit to table cell width */
+}
+
+.content
+{
+    width: 100%;
+    max-width: $max-width-content;
+    height: 100%;
+    @extend .clear-fix;
+    margin:0 auto;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+.wrapper {
+  width: $min-width;
+  margin: 0 auto;
+  display: block;
+  background: url(../img/geral/sombraMeio.jpg) repeat-y;
+  padding: 0 8px;
+}
+
+
+.example-sprite-a {
+  @include my-icons-sprite(a);  
+
+  /*  background-image: sprite-url($icons);
+    background-position: sprite-position($icons, arrow-sub-menu) $i;
+    @include sprite-dimensions($icons, arrow-sub-menu);*/
+}
+
+.example-sprite-b {
+  @include my-icons-sprite(b);  
+  
+  /*  background-image: sprite-url($icons);
+    background-position: sprite-position($icons, arrow-sub-menu) $i;
+    @include sprite-dimensions($icons, arrow-sub-menu);*/
+}
